@@ -11,8 +11,9 @@ var userScore = 0;
 
 var min = 19;
 var max = 120;
-var random = Math.floor(Math.random() * (max - min)) + min;
-compNumber = random;
-console.log(compNumber);
+var targetNumber = Math.floor(Math.random() * (max - min)) + min;
 
-$("#compNumber").append(random);
+console.log(targetNumber);
+
+
+$("compNumber").text(targetNumber);
