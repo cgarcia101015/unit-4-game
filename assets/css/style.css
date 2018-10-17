@@ -5,6 +5,7 @@
 }
 
 h1 {
+    font-family: 'Sunflower', sans-serif;
     background-color: #ca6f35;
     color: #ffffff;
     text-align: left;
@@ -13,7 +14,8 @@ h1 {
     font-size:30px;
 }
 
-#instructions {
-    color:#45a395;
-    background-color: #f9e5d2;
+.instructions {
+    font-family: 'Sunflower', sans-serif;
+    color: black;
+    background-color: #c0d8b3;
 }
