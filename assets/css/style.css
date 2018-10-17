@@ -18,4 +18,43 @@ h1 {
     font-family: 'Sunflower', sans-serif;
     color: black;
     background-color: #c0d8b3;
+    width: 600px;
+}
+
+img {
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.numbers {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 30px;
+    color: black;
+    background-color: #c0d8b3;
+    width: 300px;
+
+}
+
+.numbers1 {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 30px;
+    color: white;
+    background-color: #5a3cdf;
+    width: 300px;
+
+}
+
+.winsAndLosses {
+    font-family: 'Sunflower', sans-serif;
+    background-color: #ca6f35;
+    color: #ffffff;
+    text-align: left;
+    padding: 20px 5px 20px 5px;
+    width: 300px;
+    font-size:30px;
+}
+
+body {
+    background-color: aquamarine;
 }
