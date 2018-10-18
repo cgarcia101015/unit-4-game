@@ -29,10 +29,22 @@ myFunction();
 
 console.log(points);
 
+//Creates 4 different imagesCrystals using loop and gives them a value
 for (var i = 0; i < 4; i++) {
-   
-    console.log(points[i]);
+   console.log(points[i]);
+   //
+   var imageCrystal = $("<img>");
+   imageCrystal.addClass("crystal-image");
+
+   imageCrystal.attr("src", "images/" + [i] + ".png");
+
+   imageCrystal.attr("data-crystalvalue", points[i]);
+
+   $("#crystals").append(imageCrystal);
+
 };
+
+
 
 
 
