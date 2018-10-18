@@ -46,6 +46,34 @@ for (var i = 0; i < 4; i++) {
 
 
 
+//click events for each image
+$(".crystal-image").on("click", function() {
+var crystalvalue = ($(this).attr("data-crystalvalue"));
+crystalvalue = parseInt(crystalvalue);
+
+//Adds crystalValue to userScore
+//Every click adds to userScore
+userScore += crystalvalue;
+$("#userScore").text(userScore);
+
+if (targetNumber === userScore) {
+    wins++;
+    $("#wins").text(wins);
+    var low = 19;
+    var high = 120;
+    var newTarget = Math.floor(Math.random() * (low - high)) + low;
+    $("#compNumber").text(newTarget);
+    var resetScore = 0;
+    $("#userScore").text(resetScore);
+    
+} else if (userScore >= targetNumber) {
+    losses++;
+    $("#losses").text(losses);
+  
+    
+}
+//need to reset values of userScore and targetNumber
+});
 
 
 
