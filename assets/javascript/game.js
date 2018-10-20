@@ -30,7 +30,8 @@ myFunction();
 console.log(points);
 
 //Creates 4 different imagesCrystals using loop and gives them a value
-for (var i = 0; i < 4; i++) {
+function imgCrystals () {
+   for (var i = 0; i < 4; i++) {
    console.log(points[i]);
    //
    var imageCrystal = $("<img>");
@@ -42,8 +43,10 @@ for (var i = 0; i < 4; i++) {
 
    $("#crystals").append(imageCrystal);
 
+    };
 };
 
+imgCrystals();
 
 
 //click events for each image
@@ -59,10 +62,12 @@ $("#userScore").text(userScore);
 if (targetNumber === userScore) {
     wins++;
     $("#wins").text(wins);
+    
     var low = 19;
     var high = 120;
     var newTarget = Math.floor(Math.random() * (low - high)) + low;
     $("#compNumber").text(newTarget);
+    console.log(newTarget);
     var resetScore = 0;
     $("#userScore").text(resetScore);
     
@@ -72,6 +77,7 @@ if (targetNumber === userScore) {
   
     
 }
+//make sure goal score is alway positive
 //need to reset values of userScore and targetNumber
 });
 
