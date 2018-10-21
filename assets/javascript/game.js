@@ -1,19 +1,26 @@
 //Variables
-var wins = 0;
-
-var losses = 0;
-
-var compNumber = 0;
-
-var userScore = 0;
-
-
-//Creates random number between 19-120 for targetNumber
+var wins;
+var losses;
+var userScore;
+var targetNumber;
 var min = 19;
 var max = 120;
-var targetNumber = Math.floor(Math.random() * (max - min)) + min;
 
-console.log(targetNumber);
+
+
+function init(gameIsStarting) {
+  if (gameIsStarting) {
+    wins = 0;
+    losses = 0;  
+  }
+
+  userScore = 0;
+  //Creates random number between 19-120 for targetNumber
+  targetNumber = Math.floor(Math.random() * (max - min)) + min;
+}
+
+init(true);
+
 
 
 $("#compNumber").text(targetNumber);
@@ -61,29 +68,28 @@ $("#userScore").text(userScore);
 
 if (targetNumber === userScore) {
     wins++;
+
     $("#wins").text(wins);
+
+    init(false);
+    myFunction();
+
     
-    var low = 19;
-    var high = 120;
-    var newTarget = Math.floor(Math.random() * (low - high)) + low;
-    $("#compNumber").text(newTarget);
-    console.log(newTarget);
-    var resetScore = 0;
-    $("#userScore").text(resetScore);
+
+    $("#compNumber").text(targetNumber);
+    // console.log(newTarget);
+    // var resetScore = 0;
+    // $("#userScore").text(resetScore);
     
 } else if (userScore >= targetNumber) {
     losses++;
     $("#losses").text(losses);
+    init(false);
+    myFunction();
+    console.log(points);
   
     
 }
 //make sure goal score is alway positive
 //need to reset values of userScore and targetNumber
 });
-
-
-
-
-
-
-
